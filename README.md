@@ -8,6 +8,7 @@ Python - https://www.python.org/
 
 # Install dependencies
 pip install bybit-ws
+
 pip install bybit
 
 # Starting the script
