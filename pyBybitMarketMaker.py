@@ -19,7 +19,7 @@ def Connect(restart):
                         api_key=apikey, api_secret=apisecret)
 
 
-async def connectapi(restart=False):
+def connectapi(restart=False):
     global ws
     # subscribe to topics
     Connect(restart)
