@@ -49,11 +49,11 @@ def connectapi(restart=False):
                     if side == 'Buy':
                         # set sell order
                         print("Buy filled. Setting sell")
-                        print(client.Order.Order_newV2(side="Sell",symbol=symbol,order_type=order_type,qty=qty,price=price+spread,time_in_force="GoodTillCancel").result())
+                        print(client.Order.Order_new(side="Sell",symbol=symbol,order_type=order_type,qty=qty,price=price+spread,time_in_force="GoodTillCancel").result())
                     else:
                         # set buy order
                         print("Sell filled. Setting buy")
-                        print(client.Order.Order_newV2(side="Buy",symbol=symbol,order_type=order_type,qty=qty,price=price-spread,time_in_force="GoodTillCancel").result())
+                        print(client.Order.Order_new(side="Buy",symbol=symbol,order_type=order_type,qty=qty,price=price-spread,time_in_force="GoodTillCancel").result())
         except :
             connectapi( True)
             
